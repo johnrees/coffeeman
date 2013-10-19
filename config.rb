@@ -53,6 +53,16 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+activate :deploy do |deploy|
+  deploy.method = :git
+  # remote is optional (default is "origin")
+  # run `git remote -v` to see a list of possible remotes
+  # deploy.remote = "some-other-remote-name"
+  # branch is optional (default is "gh-pages")
+  # run `git branch -a` to see a list of possible branches
+  # deploy.branch = "some-other-branch-name"
+end
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
